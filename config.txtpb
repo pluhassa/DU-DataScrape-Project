@@ -1,0 +1,9 @@
+configs {
+  name: "timeout"
+  value: "30"
+}
+
+configs {
+  name: "retries"
+  value: "5"
+}
