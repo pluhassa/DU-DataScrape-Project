@@ -7,7 +7,7 @@ analyse-fallback-blocks=no
 
 # Clear in-memory caches upon conclusion of linting. Useful if running pylint
 # in a server-like mode.
-clear-cache-post-run=no
+# clear-cache-post-run=yes
 
 # Load and enable all available extensions. Use --list-extensions to see a list
 # all available extensions.
@@ -46,7 +46,7 @@ fail-under=10
 #from-stdin=
 
 # Files or directories to be skipped. They should be base names, not paths.
-ignore=CVS
+ignore=CVS, README.md
 
 # Add files or directories matching the regular expressions patterns to the
 # ignore-list. The regex matches against paths and can be in Posix or Windows
@@ -89,7 +89,7 @@ persistent=yes
 
 # Resolve imports to .pyi stubs if available. May reduce no-member messages and
 # increase not-an-iterable messages.
-prefer-stubs=no
+# prefer-stubs=yes
 
 # Minimum Python version to use for version dependent checks. Will default to
 # the version used to run pylint.
@@ -102,7 +102,7 @@ recursive=no
 # source root is an absolute path or a path relative to the current working
 # directory used to determine a package namespace for modules located under the
 # source root.
-source-roots=
+# source-roots=
 
 # Allow loading of arbitrary C extensions. Extensions are imported into the
 # active Python interpreter and may run arbitrary code.
@@ -313,7 +313,7 @@ max-locals=15
 max-parents=7
 
 # Maximum number of positional arguments for function / method.
-max-positional-arguments=5
+# max-positional-arguments=5
 
 # Maximum number of public methods for a class (see R0904).
 max-public-methods=20
@@ -373,7 +373,7 @@ single-line-if-stmt=no
 allow-any-import-level=
 
 # Allow explicit reexports by alias from a package __init__.
-allow-reexport-from-package=no
+# allow-reexport-from-package=yes
 
 # Allow wildcard imports from modules that define __all__.
 allow-wildcard-with-all=no
@@ -444,8 +444,8 @@ disable=raw-checker-failed,
         useless-suppression,
         deprecated-pragma,
         use-symbolic-message-instead,
-        use-implicit-booleaness-not-comparison-to-string,
-        use-implicit-booleaness-not-comparison-to-zero
+# use-implicit-booleaness-not-comparison-to-string,
+#use-implicit-booleaness-not-comparison-to-zero
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -458,13 +458,13 @@ enable=
 
 # List of qualified names (i.e., library.method) which require a timeout
 # parameter e.g. 'requests.api.get,requests.api.post'
-timeout-methods=requests.api.delete,requests.api.get,requests.api.head,requests.api.options,requests.api.patch,requests.api.post,requests.api.put,requests.api.request
+#timeout-methods=requests.api.delete,requests.api.get,requests.api.head,requests.api.options,requests.api.patch,requests.api.post,requests.api.put,requests.api.request
 
 
 [MISCELLANEOUS]
 
 # Whether or not to search for fixme's in docstrings.
-check-fixme-in-docstring=no
+# check-fixme-in-docstring=yes
 
 # List of note tags to take in consideration, separated by a comma.
 notes=FIXME,
@@ -489,7 +489,7 @@ never-returning-functions=sys.exit,argparse.parse_error
 # Let 'consider-using-join' be raised when the separator to join on would be
 # non-empty (resulting in expected fixes of the type: ``"- " + " -
 # ".join(items)``)
-suggest-join-with-non-empty-separator=yes
+# suggest-join-with-non-empty-separator=no
 
 
 [REPORTS]

@@ -1,9 +1,9 @@
 # DU-DataScrape-Project
 
-2/20/26: Pluto added in main.py with the hard parser, installed git hook and pylint. Unsure as to whether or not this will go on to the rest of the repo. Needs to add the yaml to make pylint and pre-commit work.
+### Pylint:
 
-3/4/26: Pluto added in the .pre-commit-config.yaml for pre-commit and pylint.
+Pylint often will give errors as to what is not up to its standard. Best way to find out what those errors are is to type in the terminal "pylint [insert your file name].py" and then it will give you all of the errors that it has found with your code. You are able to do a websearch and find out how to make it up to pylint's standard. It will tell you the line where the error is and then the associated issue with it.
 
-3/25/26: Pluto added in the argparse module and added in a few lines to set up the argparse in main. Updated pylint as well, however it is still having some issues as pylint is not up to date with python 3.14. Had to comment out some of the .yaml file as it is giving issues.
+### Arg Parse:
 
-4/10/26: Pluto fixed the .yaml file and uncommented the lines that were previously giving issues.
+Arg parse has at the moment 3 different types, there are 2 that have choices, being log level and the platform. This will make it easier for us to run our code from the terminal. More to come as we use it later on.
