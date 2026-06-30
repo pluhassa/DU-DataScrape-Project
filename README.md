@@ -1,14 +1,19 @@
 # DU-DataScrape-Project
 
+## Prerequisites:
+Install required tools:
+```
+pip install pylint pre-commit
+```
+Recommended one-time setup for git hooks:
+```
+pre-commit install
+```
+
 ## Pylint:
 
 This project uses **Pylint** to analyze and improve code quality, ensuring it is readable and follows industry practices. To run it:
 
-### **Installation**
-#### Install Pylint using pip:
-```
-pip install pylint
-```
 
 ### Running Pylint
 To analyze your code, run:
@@ -53,3 +58,38 @@ python your_script.py --input "data.csv" --log-level "DEBUG"
 | --log-level | Set the logging level| No | DEBUG, INFO, WARNING, ERROR, CRITICAL | INFO |
 | --file-path | Path to the input file | Yes | N/A | N/A |
 | --platform | Select the platform to use | No | X, Youtube, Instagram | N/A |
+
+
+## Unit Tests
+Tests are located in `tests/tests_main.py`
+
+Run test with disvoery:
+```
+python -m unittest discover -s tests -p "tests_*.py" -v
+```
+
+Current test coverage includes:
+- Default argument behavior
+- Valid argument behavior
+- Invalid argparse choices raising SystemExit
+
+## Pre-Upload Script
+
+Before uploading, run `pre-uploads.ps1`:
+```
+powershell -ExecutionPolicy Bypass -File .\pre-upload.ps1
+```
+This script checks:
+- Python availability
+- pre-commit hooks
+- pylint on `main.py`
+- Default run of `main.py`
+- unittest suite
+
+## Notes on Pre-Commit Auto-Fixes
+Some hooks can automatically modify files (for example, end-of-file-fixer). If that happens,
+stage the changed files and run checks again:
+```
+git add .
+pre-commit run --all-files
+```
